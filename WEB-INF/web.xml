@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+<servlet>
+<servlet-name>FetchItemsController</servlet-name>
+<servlet-class>cart.FetchItemsServlet</servlet-class>
+<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet>
+<servlet-name>AddItemsController</servlet-name>
+<servlet-class>cart.AddItemsServlet</servlet-class>
+<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet>
+<servlet-name>DecisionController</servlet-name>
+<servlet-class>cart.DecisionServlet</servlet-class>
+<load-on-startup>1</load-on-startup>
+</servlet>
+<!--Standard action Servlet Mapping-->
+<servlet-mapping>
+<servlet-name>FetchItemsController</servlet-name>
+<url-pattern>fetchItems</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>AddItemsController</servlet-name>
+<url-pattern>addItems</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>DecisionController</servlet-name>
+<url-pattern>decision</url-pattern>
+</servlet-mapping>
+<session-timeout>1</session-timeout>
+<!-- the Usual welcome file list -->
+<welcome-file-list>
+<welcome-file>Index.html</welcome-file>
+</welcome-file-list>
+
+</web-app>
